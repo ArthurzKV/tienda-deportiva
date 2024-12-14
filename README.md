@@ -61,10 +61,23 @@ Este proyecto es una tienda en línea básica desarrollada en **PHP**, diseñada
          stock INT NOT NULL,
          imagen TEXT
      );
+     CREATE TABLE usuarios (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        username VARCHAR(50) NOT NULL UNIQUE,
+        password TEXT NOT NULL,
+        tipo ENUM('admin', 'user') NOT NULL
+      );
+     CREATE TABLE carrito (
+        id INT AUTO_INCREMENT PRIMARY KEY,
+        producto_id INT NOT NULL,
+        cantidad INT NOT NULL,
+        FOREIGN KEY (producto_id) REFERENCES productos(id)
+      );
      ```
+     
    - Configura las variables de conexión en el código (`MYSQLHOST`, `MYSQLUSER`, `MYSQLPASSWORD`, `MYSQLDATABASE`).
-3. **Inicia un servidor local**, como XAMPP o Laragon.
-4. Abre el archivo `index.php` en tu navegador.
+4. **Inicia un servidor local**, como XAMPP o Laragon.
+5. Abre el archivo `index.php` en tu navegador.
 
 ---
 
