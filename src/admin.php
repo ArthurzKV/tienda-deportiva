@@ -9,6 +9,13 @@
 <body class="bg-gray-100">
     <div class="container mx-auto p-4">
         <h1 class="text-3xl font-bold text-center mb-6">Administrar Productos</h1>
+        
+        <div class="mb-4">
+            <a href="index.php" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">
+                Regresar al inicio
+            </a>
+        </div>
+        
         <form method="POST" action="admin.php" class="mb-6">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
