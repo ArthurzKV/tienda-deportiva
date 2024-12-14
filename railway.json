@@ -4,9 +4,10 @@
     },
     "env": {
       "DB_HOST": "containers-us-west-XXX.railway.app",
-      "DB_USER": "mysql",
-      "DB_PASSWORD": "tu-contraseña-generada",
-      "DB_NAME": "tienda" 
+      "DB_USER": "root",
+      "DB_PASSWORD": "zqeeoNhShUgqyzGsoxzfTIXfTWjdRuFN",
+      "DB_NAME": "railway" 
+      
     }
   }
   

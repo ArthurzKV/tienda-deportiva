@@ -84,21 +84,17 @@
     <?php
     if (isset($_POST['comprar'])) {
         // $conexion = new mysqli("db", "root", "root", "tienda");
-        $host = getenv('DB_HOST') ?: 'db'; // Usa 'db' como fallback en local
-        $user = getenv('DB_USER') ?: 'root';
-        $password = getenv('DB_PASSWORD') ?: 'root';
-        $database = getenv('DB_NAME') ?: 'tienda';
-
-        $conexion = new mysqli($host, $user, $password, $database);
-
-        if ($conexion->connect_error) {
-            die("Error de conexión: " . $conexion->connect_error);
-        }
-
+        $conexion = new mysqli(
+            getenv('DB_HOST') ?: 'localhost',
+            getenv('DB_USER') ?: 'root',
+            getenv('DB_PASSWORD') ?: 'root',
+            getenv('DB_NAME') ?: 'tienda'
+        );
         
         if ($conexion->connect_error) {
             die("Error de conexión: " . $conexion->connect_error);
         }
+        
 
         $sql = "SELECT producto_id, cantidad FROM carrito";
         $result = $conexion->query($sql);
