@@ -49,7 +49,7 @@ Este proyecto es una tienda en línea básica desarrollada en **PHP**, diseñada
 
 1. **Clona el repositorio** en tu máquina local:
    ```bash
-   git clone <URL_DEL_REPOSITORIO>
+   git clone <https://github.com/ArthurzKV/tienda-deportiva>
    ```
 2. **Configura la base de datos MySQL**:
    - Crea una base de datos con las siguientes tablas:
