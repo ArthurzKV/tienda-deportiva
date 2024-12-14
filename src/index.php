@@ -31,10 +31,10 @@ if (isset($_GET['logout'])) {
 // Conectar a la base de datos
 // $conexion = new mysqli("db", "root", "root", "tienda");
 $conexion = new mysqli(
-    getenv('DB_HOST') ?: 'localhost',
-    getenv('DB_USER') ?: 'root',
-    getenv('DB_PASSWORD') ?: 'root',
-    getenv('DB_NAME') ?: 'tienda'
+    getenv('MYSQLHOST') ?: 'localhost',
+    getenv('MYSQLUSER') ?: 'root',
+    getenv('MYSQLPASSWORD') ?: 'root',
+    getenv('MYSQLDATABASE') ?: 'railway'
 );
 
 if ($conexion->connect_error) {
