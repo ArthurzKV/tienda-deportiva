@@ -13,7 +13,7 @@ $conexion = new mysqli(
     getenv('MYSQLHOST') ?: 'localhost',
     getenv('MYSQLUSER') ?: 'root',
     getenv('MYSQLPASSWORD') ?: 'root',
-    getenv('MYSQLDATABASE') ?: 'tienda'
+    getenv('MYSQLDATABASE') ?: 'railway'
 );
 
 if ($conexion->connect_error) {
