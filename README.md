@@ -85,6 +85,9 @@ Este proyecto fue desarrollado como proyecto final para la materia **Desarrollo 
 
 ### Página principal:
 ![Logo de la Tienda Deportiva](https://i.imgur.com/thjHzQy.png)
+![Dashboard Principal](https://i.imgur.com/YXjzoIt.jpeg)
+![Dashboard Administrador](https://i.imgur.com/njTgbxv.png)
+
 
 ---
 
