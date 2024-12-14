@@ -5,11 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrito de Compras</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Incluir Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body class="bg-gradient-to-r from-green-100 via-white to-green-100 flex flex-col min-h-screen">
-    <!-- Encabezado -->
     <header class="bg-green-600 text-white shadow-lg">
         <div class="container mx-auto p-4 flex justify-between items-center">
             <h1 class="text-3xl font-bold">Carrito de Compras</h1>
@@ -19,7 +17,6 @@
         </div>
     </header>
 
-    <!-- Tabla de productos en el carrito -->
     <main class="container mx-auto p-6 flex-grow">
         <div class="bg-white rounded-xl shadow-lg overflow-hidden">
             <table class="w-full">
@@ -33,7 +30,12 @@
                 </thead>
                 <tbody>
                     <?php
-                    $conexion = new mysqli("db", "root", "root", "tienda");
+                    $conexion = new mysqli(
+                        getenv('MYSQLHOST') ?: 'localhost',
+                        getenv('MYSQLUSER') ?: 'root',
+                        getenv('MYSQLPASSWORD') ?: 'root',
+                        getenv('MYSQLDATABASE') ?: 'railway'
+                    );
 
                     if ($conexion->connect_error) {
                         die("Error de conexión: " . $conexion->connect_error);
