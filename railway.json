@@ -5,8 +5,8 @@
     "env": {
       "DB_HOST": "containers-us-west-XXX.railway.app",
       "DB_USER": "mysql",
-      "DB_PASSWORD": "tu-contraseña",
-      "DB_NAME": "tu-nombre-de-base-de-datos"
+      "DB_PASSWORD": "tu-contraseña-generada",
+      "DB_NAME": "tienda" 
     }
   }
   
