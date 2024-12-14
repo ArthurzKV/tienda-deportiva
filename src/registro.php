@@ -19,12 +19,11 @@ if ($conexion->connect_error) {
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = $_POST['username'] ?? '';
     $password = $_POST['password'] ?? '';
-    $tipo = $_POST['tipo'] ?? 'user'; // Tipo de usuario (por defecto: 'user')
+    $tipo = $_POST['tipo'] ?? 'user';
 
     if (empty($username) || empty($password)) {
         $error = "Por favor, completa todos los campos.";
     } else {
-        // Verifica si el usuario ya existe
         $stmt = $conexion->prepare("SELECT id FROM usuarios WHERE username = ?");
         $stmt->bind_param("s", $username);
         $stmt->execute();
@@ -34,7 +33,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         } else {
             $stmt->close();
 
-            // Inserta el nuevo usuario
             $hashed_password = password_hash($password, PASSWORD_BCRYPT);
             $stmt = $conexion->prepare("INSERT INTO usuarios (username, password, tipo) VALUES (?, ?, ?)");
             $stmt->bind_param("sss", $username, $hashed_password, $tipo);
