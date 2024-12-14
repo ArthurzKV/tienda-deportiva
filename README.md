@@ -39,6 +39,7 @@ Este proyecto es una tienda en línea básica desarrollada en **PHP**, diseñada
   - PHP
   - MySQL
   - TailwindCSS
+  - JWT (JSON Web Tokens): Utilizado para la autenticación y autorización de usuarios de manera segura mediante el intercambio de tokens en formato JSON, eliminando la necesidad de   sesiones en el servidor.
 - **Despliegue:**
   - Railway para hosting del proyecto.
 
