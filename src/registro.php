@@ -58,7 +58,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body class="bg-gray-100 flex items-center justify-center h-screen">
     <div class="bg-white border-black border-2 rounded-lg shadow-lg p-6 w-full max-w-sm">
-        <img src="logo.png" alt="Logo" class="w-24 h-24 mx-auto mb-4">
+        <img src="https://i.imgur.com/thjHzQy.png" alt="Logo" class="w-24 h-24 mx-auto mb-4">
         <h1 class="text-2xl font-bold text-center mb-6">Crear Cuenta</h1>
         <?php if (isset($error)): ?>
             <p class="text-red-500 text-center mb-4"><?= htmlspecialchars($error) ?></p>
